@@ -23,10 +23,15 @@ class AddMovieToWatchlistAction
             ['external_id' => $movieData->externalId],
             $movieData->toArray()
         );
-
-        return WatchlistItem::firstOrCreate([
-            'user_id' => $user->id,
-            'movie_id' => $movie->id,
-        ]);
+        
+        return WatchlistItem::firstOrCreate(
+            [
+                'user_id' => $user->id,
+                'movie_id' => $movie->id,
+            ],
+            [
+                'status' => 'to_watch',
+            ]
+        );
     }
 }
