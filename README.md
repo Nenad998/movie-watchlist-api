@@ -155,5 +155,4 @@ When designing the API, the focus was on consistent responses, predictable URLs,
 * Add automated tests for the most important scenarios
 * Introduce caching for OMDb API requests
 * Improve error handling with custom exception classes
-* Add API documentation
-* Support more advanced filtering and sorting options for watchlist items
+
